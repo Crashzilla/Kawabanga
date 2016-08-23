@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.viniciusduarte.kawabanga.PedidoActivity">
+
+        <TextView
+            android:id="@+id/tvUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            tools:text="Olá, Hieder" />
+
+        <TextView
+            style="@style/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_escolha_pizza" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbAtum"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_pizza_atum" />
+
+                <CheckBox
+                    android:id="@+id/cbBacon"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_pizza_bacon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbCalabresa"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_pizza_calabresa" />
+
+                <CheckBox
+                    android:id="@+id/cbMussarela"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_pizza_mussarela" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_tamanho_pizza" />
+
+        <RadioGroup
+            android:id="@+id/rgTamanhoPizza"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbGrande"
+                style="@style/radiogroup_tamanho_pizza"
+                android:text="@string/txt_pizza_grande" />
+
+            <RadioButton
+                android:id="@+id/rbMedia"
+                style="@style/radiogroup_tamanho_pizza"
+                android:text="@string/txt_pizza_media" />
+
+            <RadioButton
+                android:id="@+id/rbPequena"
+                style="@style/radiogroup_tamanho_pizza"
+                android:text="@string/txt_pizza_pequena" />
+
+        </RadioGroup>
+
+        <TextView
+            style="@style/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_forma_pagamento" />
+
+        <Spinner
+            android:id="@+id/spPagamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/opcoes_pagamento" />
+
+        <TextView
+            style="@style/Header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_extras" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbBordaRecheada"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_borda_recheada" />
+
+                <CheckBox
+                    android:id="@+id/cbRecheioExtra"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_recheio_extra" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbRefrigerante"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_refrigerante" />
+
+                <CheckBox
+                    android:id="@+id/cbSobremesa"
+                    style="@style/checkbox_pizza"
+                    android:text="@string/txt_sobremesa" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="calcular"
+            android:text="@string/txt_calcular" />
+
+    </LinearLayout>
+</ScrollView>
